@@ -1,1 +1,13 @@
 /medash.code-workspace
+
+# Local secrets and env files (never commit real values)
+.env
+.env.*
+!.env.example
+secrets/
+.secrets/
+
+# Python artifacts
+__pycache__/
+*.pyc
+.venv/
