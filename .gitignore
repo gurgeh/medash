@@ -11,3 +11,9 @@ secrets/
 __pycache__/
 *.pyc
 .venv/
+.venv*/
+
+# Local databases and generated personal exports
+data/*.sqlite
+memory-bank/*.jsonl
+org/

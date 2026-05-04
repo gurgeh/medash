@@ -15,8 +15,135 @@ def days(n: int) -> list[date]:
     return [t - timedelta(days=i) for i in range(n)]
 
 
-def truthy(x: Any) -> bool:
-    return bool(x)
+def _is_number(x: Any) -> bool:
+    return isinstance(x, (int, float)) and not isinstance(x, bool)
+
+
+def _deep_numeric_present(x: Any) -> bool:
+    if _is_number(x):
+        return x > 0
+    if isinstance(x, list):
+        return any(_deep_numeric_present(v) for v in x)
+    if isinstance(x, dict):
+        skip = {
+            "calendarDate",
+            "startGMT",
+            "endGMT",
+            "activityLevel",
+            "primaryActivityLevel",
+            "activityLevelConstant",
+            "measurementSystem",
+            "unitSystem",
+            "timeOffset",
+            "userId",
+            "userProfileId",
+            "fullName",
+            "displayName",
+        }
+        return any(
+            (k not in skip) and _deep_numeric_present(v) for k, v in x.items()
+        )
+    return False
+
+
+def has_data_for(name: str, payload: Any) -> bool:
+    n = name.lower()
+
+    if n.startswith("steps ("):
+        if isinstance(payload, list):
+            return any(isinstance(p, dict) and _is_number(p.get("steps")) and p["steps"] > 0 for p in payload)
+        return False
+
+    if n == "heart rate":
+        if isinstance(payload, dict):
+            hr = payload.get("heartRateValues") or payload.get("heartRate")
+            if isinstance(hr, list):
+                # heartRateValues entries are [timestamp, value]
+                for e in hr:
+                    if isinstance(e, (list, tuple)) and len(e) >= 2 and _is_number(e[1]) and e[1] > 0:
+                        return True
+                return False
+        return _deep_numeric_present(payload)
+
+    if n == "sleep":
+        if isinstance(payload, dict):
+            for key in ("sleepTimeInSeconds", "durationInSeconds", "overallScore", "totalSleepSeconds"):
+                v = payload.get(key)
+                if _is_number(v) and v > 0:
+                    return True
+        return _deep_numeric_present(payload)
+
+    if n in ("stress", "spo2", "respiration"):
+        return _deep_numeric_present(payload)
+
+    if n == "intensity minutes":
+        if isinstance(payload, dict):
+            for key in ("totalIntensityMinutes", "intensityMinutes", "moderateIntensityMinutes", "vigorousIntensityMinutes"):
+                v = payload.get(key)
+                if _is_number(v) and v > 0:
+                    return True
+        return _deep_numeric_present(payload)
+
+    if n == "resting hr (rhr)":
+        if isinstance(payload, dict):
+            v = payload.get("restingHeartRate")
+            return _is_number(v) and v > 0
+        return False
+
+    if n == "hrv":
+        return _deep_numeric_present(payload)
+
+    if n == "floors":
+        if isinstance(payload, dict):
+            for key in ("floorsClimbed", "floorsDescended", "dailyFloors"):
+                v = payload.get(key)
+                if _is_number(v) and v > 0:
+                    return True
+        return _deep_numeric_present(payload)
+
+    if n == "hydration":
+        if isinstance(payload, dict):
+            for key in ("totalHydration", "total", "valueInML", "hydrationValues"):
+                v = payload.get(key)
+                if _is_number(v) and v > 0:
+                    return True
+                if isinstance(v, list) and any(_is_number(x) and x > 0 for x in v):
+                    return True
+        return False
+
+    if n == "daily weigh-ins":
+        if isinstance(payload, dict):
+            lst = payload.get("dateWeightList") or payload.get("weightEntries")
+            if isinstance(lst, list) and len(lst) > 0:
+                return True
+            avg = payload.get("totalAverage")
+            if isinstance(avg, dict):
+                w = avg.get("weight") or avg.get("weightInKilograms")
+                return _is_number(w) and w > 0
+        return False
+
+    if n in ("user summary", "stats", "stats + body"):
+        return _deep_numeric_present(payload)
+
+    if n == "body battery events":
+        return isinstance(payload, list) and len(payload) > 0
+
+    if n == "training readiness":
+        if isinstance(payload, dict):
+            score = payload.get("trainingReadinessScore") or payload.get("score")
+            return _is_number(score) and score > 0
+        return False
+
+    if n == "training status":
+        if isinstance(payload, dict):
+            ts = payload.get("trainingStatus") or payload.get("primaryStatus") or payload.get("status")
+            return isinstance(ts, (str, dict)) and bool(ts)
+        return False
+
+    if n == "max metrics":
+        return _deep_numeric_present(payload)
+
+    return _deep_numeric_present(payload)
 
 
 def survey(client: GarminClient) -> str:
@@ -69,23 +196,45 @@ def survey(client: GarminClient) -> str:
     lines.append("For each metric: the interval and how many days returned data.")
 
     for title, interval_desc, fn in per_day_funcs:
-        w_count = sum(1 for d in last7 if truthy(fn(iso(d))))
-        m_count = sum(1 for d in last30 if truthy(fn(iso(d))))
+        w_count = sum(1 for d in last7 if has_data_for(title, fn(iso(d))))
+        m_count = sum(1 for d in last30 if has_data_for(title, fn(iso(d))))
         lines.append(f"- {title} — {interval_desc}: week {w_count}/7 days, month {m_count}/30 days")
 
     lines.append("")
     lines.append("## Range-Based Metrics (last 30 days)")
     for title, interval_desc, fn in per_range_funcs:
-        if getattr(fn, "__name__", "") == "get_daily_steps":
+        fname = getattr(fn, "__name__", "")
+        if fname == "get_daily_steps":
             data = fn((today - timedelta(days=6)).isoformat(), today.isoformat())
-            recent_week = bool(data)
+            recent_week = isinstance(data, list) and any(
+                isinstance(p, dict) and _is_number(p.get("totalSteps")) and p["totalSteps"] > 0 for p in data
+            )
             lines.append(f"- {title} — {interval_desc}: week data={recent_week}")
-        elif getattr(fn, "__name__", "") == "get_race_predictions":
+        elif fname == "get_race_predictions":
             d = fn()
-            lines.append(f"- {title} — {interval_desc}: available={bool(d)}")
+            lines.append(f"- {title} — {interval_desc}: available={_deep_numeric_present(d) or bool(d)}")
         else:
             d = fn(start30, end30)
-            lines.append(f"- {title} — {interval_desc}: month data={bool(d)}")
+            has = False
+            if fname == "get_body_composition":
+                if isinstance(d, dict):
+                    avg = d.get("totalAverage")
+                    if isinstance(avg, dict):
+                        w = avg.get("weight") or avg.get("weightInKilograms")
+                        has = _is_number(w) and w > 0
+                    lst = d.get("dateWeightList")
+                    if not has and isinstance(lst, list) and len(lst) > 0:
+                        has = True
+            elif fname == "get_weigh_ins":
+                if isinstance(d, dict):
+                    for key in ("dateWeightList", "weighIns", "weights", "weighInList"):
+                        lst = d.get(key)
+                        if isinstance(lst, list) and len(lst) > 0:
+                            has = True
+                            break
+            else:
+                has = _deep_numeric_present(d) or (isinstance(d, list) and len(d) > 0)
+            lines.append(f"- {title} — {interval_desc}: month data={has}")
 
     lines.append("")
     lines.append("## Activities (Events) — Last 30 Days")

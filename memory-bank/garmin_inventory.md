@@ -13,24 +13,24 @@ For each metric: the interval and how many days returned data.
 - SpO2 — per-day: week 7/7 days, month 30/30 days
 - Respiration — per-day: week 7/7 days, month 30/30 days
 - Intensity minutes — per-day: week 7/7 days, month 30/30 days
-- Resting HR (RHR) — per-day: week 7/7 days, month 30/30 days
+- Resting HR (RHR) — per-day: week 0/7 days, month 0/30 days
 - HRV — per-day: week 0/7 days, month 0/30 days
-- Floors — per-day: week 7/7 days, month 30/30 days
-- Hydration — per-day: week 7/7 days, month 30/30 days
-- Daily weigh-ins — per-day: week 7/7 days, month 30/30 days
+- Floors — per-day: week 0/7 days, month 0/30 days
+- Hydration — per-day: week 0/7 days, month 0/30 days
+- Daily weigh-ins — per-day: week 0/7 days, month 0/30 days
 - User summary — per-day: week 7/7 days, month 30/30 days
 - Stats — per-day: week 7/7 days, month 30/30 days
 - Stats + body — per-day: week 7/7 days, month 30/30 days
 - Body Battery events — per-day events: week 0/7 days, month 0/30 days
 - Training readiness — per-day: week 0/7 days, month 0/30 days
-- Training status — per-day: week 7/7 days, month 30/30 days
+- Training status — per-day: week 0/7 days, month 0/30 days
 - Max metrics — per-day: week 1/7 days, month 6/30 days
 
 ## Range-Based Metrics (last 30 days)
 - Daily steps (totals) — daily totals over range: week data=True
 - Body Battery — time series over range: month data=True
-- Body composition — range (weight/body comp): month data=True
-- Weigh-ins — range (entries): month data=True
+- Body composition — range (weight/body comp): month data=False
+- Weigh-ins — range (entries): month data=False
 - Endurance score — range: month data=True
 - Hill score — range: month data=True
 - Race predictions — range: available=True

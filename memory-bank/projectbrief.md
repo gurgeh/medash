@@ -15,4 +15,5 @@ Later, I will run some ML models on the data to look for patterns and correlatio
 ## Tech Stack
 - The project uses Python for the backend and data processing.
 - Frontend will likely be in Svelte or a specialized dashboarding framework.
-- Database is TBD, depending on volume and if time series support is needed.
+- Database is SQLite for simplicity.
+- Hosting is locally from my laptop. When running the MCP server, it will update the IP for the medash.fendrich.se subdomain on Gandi.

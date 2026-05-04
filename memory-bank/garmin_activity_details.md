@@ -1,8 +1,86 @@
 # Garmin Activity Details (last 30 days)
 
-Generated on 2025-09-28
+Generated on 2025-10-05
 
-Total activities: 20
+Total activities: 23
+
+## Activity 20578771097 — running — 2025-10-03 17:36:17
+
+- Summary fields: activityId, activityName, activityType, aerobicTrainingEffect, aerobicTrainingEffectMessage, anaerobicTrainingEffect, anaerobicTrainingEffectMessage, atpActivity, autoCalcCalories, averageHR, averageRunningCadenceInStepsPerMinute, averageSpeed, avgStrideLength, beginTimestamp, bmrCalories, calories, decoDive, deviceId, distance, duration, elapsedDuration, elevationCorrected, elevationGain, elevationLoss, endLatitude, endLongitude, endTimeGMT, eventType, fastestSplit_1000, fastestSplit_1609
+- Details: type=object keys=['activityId', 'measurementCount', 'metricsCount', 'totalMetricsCount', 'metricDescriptors', 'activityDetailMetrics', 'geoPolylineDTO', 'heartRateDTOs', 'pendingData', 'detailsAvailable']
+- Splits: type=object keys=['activityId', 'lapDTOs', 'eventDTOs']
+- Typed splits: type=object keys=['activityId', 'activityUUID', 'splits']
+- Split summaries: type=object keys=['activityId', 'activityUUID', 'splitSummaries']
+- Weather: type=object keys=['issueDate', 'temp', 'apparentTemp', 'dewPoint', 'relativeHumidity', 'windDirection', 'windDirectionCompassPoint', 'windSpeed', 'windGust', 'latitude', 'longitude', 'weatherStationDTO', 'weatherTypeDTO']
+- HR in timezones: list with 5 items; sample keys=['zoneNumber', 'secsInZone', 'zoneLowBoundary']
+- Gear: type=list<empty>
+- Exercise sets: type=object
+- Samples: {'distance': 5359.419921875, 'duration': 2310.60302734375, 'elapsedDuration': 2315.949951171875, 'calories': 449.0, 'averageHR': 148.0, 'maxHR': 184.0, 'averageSpeed': 2.319000005722046, 'elevationGain': 28.908681869506836, 'elevationLoss': 23.19242286682129, 'steps': 5542}
+
+## Activity 20570986148 — indoor_rowing — 2025-10-02 21:03:15
+
+- Summary fields: activityId, activityName, activityType, aerobicTrainingEffect, aerobicTrainingEffectMessage, anaerobicTrainingEffect, anaerobicTrainingEffectMessage, atpActivity, autoCalcCalories, averageHR, averageSpeed, beginTimestamp, bmrCalories, calories, decoDive, deviceId, distance, duration, elapsedDuration, elevationCorrected, endTimeGMT, eventType, favorite, hasHeatMap, hasImages, hasPolyline, hasSplits, hasVideo, hrTimeInZone_1, hrTimeInZone_2
+- Details: type=object keys=['activityId', 'measurementCount', 'metricsCount', 'totalMetricsCount', 'metricDescriptors', 'activityDetailMetrics', 'geoPolylineDTO', 'heartRateDTOs', 'pendingData', 'detailsAvailable']
+- Splits: type=object keys=['activityId', 'lapDTOs', 'eventDTOs']
+- Typed splits: type=object keys=['activityId', 'activityUUID', 'splits']
+- Split summaries: type=object keys=['activityId', 'activityUUID', 'splitSummaries']
+- Weather: type=object keys=['issueDate', 'temp', 'apparentTemp', 'dewPoint', 'relativeHumidity', 'windDirection', 'windDirectionCompassPoint', 'windSpeed', 'windGust', 'latitude', 'longitude', 'weatherStationDTO', 'weatherTypeDTO']
+- HR in timezones: list with 5 items; sample keys=['zoneNumber', 'secsInZone', 'zoneLowBoundary']
+- Gear: type=list<empty>
+- Exercise sets: type=object
+- Samples: {'distance': 0.0, 'duration': 2273.14306640625, 'elapsedDuration': 2273.14306640625, 'calories': 396.0, 'averageHR': 131.0, 'maxHR': 159.0, 'averageSpeed': 0.0}
+
+## Activity 20559560148 — strength_training — 2025-10-01 18:41:52
+
+- Summary fields: activeSets, activityId, activityName, activityType, aerobicTrainingEffect, aerobicTrainingEffectMessage, anaerobicTrainingEffect, anaerobicTrainingEffectMessage, atpActivity, autoCalcCalories, averageHR, averageSpeed, beginTimestamp, bmrCalories, calories, decoDive, deviceId, distance, duration, elapsedDuration, elevationCorrected, endTimeGMT, eventType, favorite, hasHeatMap, hasImages, hasPolyline, hasSplits, hasVideo, hrTimeInZone_1
+- Details: type=object keys=['activityId', 'measurementCount', 'metricsCount', 'totalMetricsCount', 'metricDescriptors', 'activityDetailMetrics', 'geoPolylineDTO', 'heartRateDTOs', 'pendingData', 'detailsAvailable']
+- Splits: type=object keys=['activityId', 'lapDTOs', 'eventDTOs']
+- Typed splits: type=object keys=['activityId', 'activityUUID', 'splits']
+- Split summaries: type=object keys=['activityId', 'activityUUID', 'splitSummaries']
+- Weather: type=object keys=['issueDate', 'temp', 'apparentTemp', 'dewPoint', 'relativeHumidity', 'windDirection', 'windDirectionCompassPoint', 'windSpeed', 'windGust', 'latitude', 'longitude', 'weatherStationDTO', 'weatherTypeDTO']
+- HR in timezones: list with 5 items; sample keys=['zoneNumber', 'secsInZone', 'zoneLowBoundary']
+- Gear: type=list<empty>
+- Exercise sets: type=object
+- Samples: {'distance': 0.0, 'duration': 2874.299072265625, 'elapsedDuration': 2874.299072265625, 'calories': 231.0, 'averageHR': 94.0, 'maxHR': 131.0, 'averageSpeed': 0.0, 'steps': 186}
+
+## Activity 20554130325 — breathwork — 2025-10-01 09:34:45
+
+- Summary fields: activityId, activityName, activityType, aerobicTrainingEffect, aerobicTrainingEffectMessage, anaerobicTrainingEffect, anaerobicTrainingEffectMessage, atpActivity, autoCalcCalories, averageHR, avgRespirationRate, avgStress, beginTimestamp, bmrCalories, calories, decoDive, deviceId, differenceStress, duration, elapsedDuration, elevationCorrected, endStress, endTimeGMT, eventType, favorite, hasHeatMap, hasImages, hasPolyline, hasSplits, hasVideo
+- Details: type=object keys=['activityId', 'measurementCount', 'metricsCount', 'totalMetricsCount', 'metricDescriptors', 'activityDetailMetrics', 'geoPolylineDTO', 'heartRateDTOs', 'pendingData', 'detailsAvailable']
+- Splits: type=object keys=['activityId', 'lapDTOs', 'eventDTOs']
+- Typed splits: type=object keys=['activityId', 'activityUUID', 'splits']
+- Split summaries: type=object keys=['activityId', 'activityUUID', 'splitSummaries']
+- Weather: type=object keys=['issueDate', 'temp', 'apparentTemp', 'dewPoint', 'relativeHumidity', 'windDirection', 'windDirectionCompassPoint', 'windSpeed', 'windGust', 'latitude', 'longitude', 'weatherStationDTO', 'weatherTypeDTO']
+- HR in timezones: list with 5 items; sample keys=['zoneNumber', 'secsInZone', 'zoneLowBoundary']
+- Gear: type=list<empty>
+- Exercise sets: type=object
+- Samples: {'duration': 180.06100463867188, 'elapsedDuration': 180.06100463867188, 'calories': 0.0, 'averageHR': 48.0, 'maxHR': 55.0}
+
+## Activity 20550896000 — running — 2025-09-30 18:17:52
+
+- Summary fields: activityId, activityName, activityType, aerobicTrainingEffect, aerobicTrainingEffectMessage, anaerobicTrainingEffect, anaerobicTrainingEffectMessage, atpActivity, autoCalcCalories, averageHR, averageRunningCadenceInStepsPerMinute, averageSpeed, avgStrideLength, beginTimestamp, bmrCalories, calories, decoDive, deviceId, distance, duration, elapsedDuration, elevationCorrected, elevationGain, elevationLoss, endLatitude, endLongitude, endTimeGMT, eventType, fastestSplit_1000, fastestSplit_1609
+- Details: type=object keys=['activityId', 'measurementCount', 'metricsCount', 'totalMetricsCount', 'metricDescriptors', 'activityDetailMetrics', 'geoPolylineDTO', 'heartRateDTOs', 'pendingData', 'detailsAvailable']
+- Splits: type=object keys=['activityId', 'lapDTOs', 'eventDTOs']
+- Typed splits: type=object keys=['activityId', 'activityUUID', 'splits']
+- Split summaries: type=object keys=['activityId', 'activityUUID', 'splitSummaries']
+- Weather: type=object keys=['issueDate', 'temp', 'apparentTemp', 'dewPoint', 'relativeHumidity', 'windDirection', 'windDirectionCompassPoint', 'windSpeed', 'windGust', 'latitude', 'longitude', 'weatherStationDTO', 'weatherTypeDTO']
+- HR in timezones: list with 5 items; sample keys=['zoneNumber', 'secsInZone', 'zoneLowBoundary']
+- Gear: type=list<empty>
+- Exercise sets: type=object
+- Samples: {'distance': 4531.9501953125, 'duration': 2630.818115234375, 'elapsedDuration': 2630.818115234375, 'calories': 408.0, 'averageHR': 128.0, 'maxHR': 157.0, 'averageSpeed': 1.7230000495910647, 'elevationGain': 97.85413360595703, 'elevationLoss': 83.41142082214355, 'steps': 6100}
+
+## Activity 20529001765 — strength_training — 2025-09-28 17:56:12
+
+- Summary fields: activeSets, activityId, activityName, activityType, aerobicTrainingEffect, aerobicTrainingEffectMessage, anaerobicTrainingEffect, anaerobicTrainingEffectMessage, atpActivity, autoCalcCalories, averageHR, averageSpeed, beginTimestamp, bmrCalories, calories, decoDive, deviceId, distance, duration, elapsedDuration, elevationCorrected, endTimeGMT, eventType, favorite, hasHeatMap, hasImages, hasPolyline, hasSplits, hasVideo, hrTimeInZone_1
+- Details: type=object keys=['activityId', 'measurementCount', 'metricsCount', 'totalMetricsCount', 'metricDescriptors', 'activityDetailMetrics', 'geoPolylineDTO', 'heartRateDTOs', 'pendingData', 'detailsAvailable']
+- Splits: type=object keys=['activityId', 'lapDTOs', 'eventDTOs']
+- Typed splits: type=object keys=['activityId', 'activityUUID', 'splits']
+- Split summaries: type=object keys=['activityId', 'activityUUID', 'splitSummaries']
+- Weather: type=object keys=['issueDate', 'temp', 'apparentTemp', 'dewPoint', 'relativeHumidity', 'windDirection', 'windDirectionCompassPoint', 'windSpeed', 'windGust', 'latitude', 'longitude', 'weatherStationDTO', 'weatherTypeDTO']
+- HR in timezones: list with 5 items; sample keys=['zoneNumber', 'secsInZone', 'zoneLowBoundary']
+- Gear: type=list<empty>
+- Exercise sets: type=object
+- Samples: {'distance': 0.0, 'duration': 2817.1279296875, 'elapsedDuration': 2817.1279296875, 'calories': 228.0, 'averageHR': 95.0, 'maxHR': 118.0, 'averageSpeed': 0.0, 'steps': 76}
 
 ## Activity 20527761728 — running — 2025-09-28 16:39:32
 
@@ -224,43 +302,3 @@ Total activities: 20
 - Gear: type=list<empty>
 - Exercise sets: type=object
 - Samples: {'distance': 0.0, 'duration': 4102.5927734375, 'elapsedDuration': 4102.5927734375, 'calories': 347.0, 'averageHR': 99.0, 'maxHR': 120.0, 'averageSpeed': 0.0, 'steps': 142}
-
-## Activity 20268684345 — strength_training — 2025-09-03 17:06:56
-
-- Summary fields: activeSets, activityId, activityName, activityType, aerobicTrainingEffect, aerobicTrainingEffectMessage, anaerobicTrainingEffect, anaerobicTrainingEffectMessage, atpActivity, autoCalcCalories, averageHR, averageSpeed, beginTimestamp, bmrCalories, calories, decoDive, deviceId, distance, duration, elapsedDuration, elevationCorrected, endTimeGMT, eventType, favorite, hasHeatMap, hasImages, hasPolyline, hasSplits, hasVideo, hrTimeInZone_1
-- Details: type=object keys=['activityId', 'measurementCount', 'metricsCount', 'totalMetricsCount', 'metricDescriptors', 'activityDetailMetrics', 'geoPolylineDTO', 'heartRateDTOs', 'pendingData', 'detailsAvailable']
-- Splits: type=object keys=['activityId', 'lapDTOs', 'eventDTOs']
-- Typed splits: type=object keys=['activityId', 'activityUUID', 'splits']
-- Split summaries: type=object keys=['activityId', 'activityUUID', 'splitSummaries']
-- Weather: type=object keys=['issueDate', 'temp', 'apparentTemp', 'dewPoint', 'relativeHumidity', 'windDirection', 'windDirectionCompassPoint', 'windSpeed', 'windGust', 'latitude', 'longitude', 'weatherStationDTO', 'weatherTypeDTO']
-- HR in timezones: list with 5 items; sample keys=['zoneNumber', 'secsInZone', 'zoneLowBoundary']
-- Gear: type=list<empty>
-- Exercise sets: type=object
-- Samples: {'distance': 0.0, 'duration': 1365.5279541015625, 'elapsedDuration': 1365.5279541015625, 'calories': 233.0, 'averageHR': 128.0, 'maxHR': 157.0, 'averageSpeed': 0.0, 'steps': 292}
-
-## Activity 20237940286 — running — 2025-08-31 17:41:12
-
-- Summary fields: activityId, activityName, activityType, aerobicTrainingEffect, aerobicTrainingEffectMessage, anaerobicTrainingEffect, anaerobicTrainingEffectMessage, atpActivity, autoCalcCalories, averageHR, averageRunningCadenceInStepsPerMinute, averageSpeed, avgGroundContactBalance, avgGroundContactTime, avgStrideLength, avgVerticalOscillation, avgVerticalRatio, beginTimestamp, bmrCalories, calories, decoDive, deviceId, distance, duration, elapsedDuration, elevationCorrected, elevationGain, elevationLoss, endLatitude, endLongitude
-- Details: type=object keys=['activityId', 'measurementCount', 'metricsCount', 'totalMetricsCount', 'metricDescriptors', 'activityDetailMetrics', 'geoPolylineDTO', 'heartRateDTOs', 'pendingData', 'detailsAvailable']
-- Splits: type=object keys=['activityId', 'lapDTOs', 'eventDTOs']
-- Typed splits: type=object keys=['activityId', 'activityUUID', 'splits']
-- Split summaries: type=object keys=['activityId', 'activityUUID', 'splitSummaries']
-- Weather: type=object keys=['issueDate', 'temp', 'apparentTemp', 'dewPoint', 'relativeHumidity', 'windDirection', 'windDirectionCompassPoint', 'windSpeed', 'windGust', 'latitude', 'longitude', 'weatherStationDTO', 'weatherTypeDTO']
-- HR in timezones: list with 5 items; sample keys=['zoneNumber', 'secsInZone', 'zoneLowBoundary']
-- Gear: type=list<empty>
-- Exercise sets: type=object
-- Samples: {'distance': 5339.72021484375, 'duration': 2180.27392578125, 'elapsedDuration': 2180.27392578125, 'calories': 466.0, 'averageHR': 154.0, 'maxHR': 182.0, 'averageSpeed': 2.4489998817443848, 'elevationGain': 26.007625579833984, 'elevationLoss': 19.604778289794922, 'steps': 5268}
-
-## Activity 20227426296 — strength_training — 2025-08-30 17:13:23
-
-- Summary fields: activeSets, activityId, activityName, activityType, aerobicTrainingEffect, aerobicTrainingEffectMessage, anaerobicTrainingEffect, anaerobicTrainingEffectMessage, atpActivity, autoCalcCalories, averageHR, averageSpeed, beginTimestamp, bmrCalories, calories, decoDive, deviceId, distance, duration, elapsedDuration, elevationCorrected, endTimeGMT, eventType, favorite, hasHeatMap, hasImages, hasPolyline, hasSplits, hasVideo, hrTimeInZone_1
-- Details: type=object keys=['activityId', 'measurementCount', 'metricsCount', 'totalMetricsCount', 'metricDescriptors', 'activityDetailMetrics', 'geoPolylineDTO', 'heartRateDTOs', 'pendingData', 'detailsAvailable']
-- Splits: type=object keys=['activityId', 'lapDTOs', 'eventDTOs']
-- Typed splits: type=object keys=['activityId', 'activityUUID', 'splits']
-- Split summaries: type=object keys=['activityId', 'activityUUID', 'splitSummaries']
-- Weather: type=object keys=['issueDate', 'temp', 'apparentTemp', 'dewPoint', 'relativeHumidity', 'windDirection', 'windDirectionCompassPoint', 'windSpeed', 'windGust', 'latitude', 'longitude', 'weatherStationDTO', 'weatherTypeDTO']
-- HR in timezones: list with 5 items; sample keys=['zoneNumber', 'secsInZone', 'zoneLowBoundary']
-- Gear: type=list<empty>
-- Exercise sets: type=object
-- Samples: {'distance': 0.0, 'duration': 3957.47412109375, 'elapsedDuration': 3957.47412109375, 'calories': 368.0, 'averageHR': 104.0, 'maxHR': 137.0, 'averageSpeed': 0.0, 'steps': 132}
-

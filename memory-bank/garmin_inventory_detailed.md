@@ -1,0 +1,212 @@
+# Garmin Data Details
+
+Generated on 2025-09-28
+
+## Per-Day Metrics
+- Metric: Steps (15-min intervals)
+  - Type: list<dict>
+  - Resolution: ~15 min intervals
+  - Stats (sample day): min=0.000, max=2145.000, mean=30.193, count=192
+  - Sample 1: {'startGMT': '2025-09-21T22:00:00.0', 'endGMT': '2025-09-21T22:15:00.0', 'steps': 0}
+  - Sample 2: {'startGMT': '2025-09-21T22:15:00.0', 'endGMT': '2025-09-21T22:30:00.0', 'steps': 0}
+  - Sample 3: {'startGMT': '2025-09-21T22:30:00.0', 'endGMT': '2025-09-21T22:45:00.0', 'steps': 0}
+- Metric: Heart rate
+  - Type: object
+  - Resolution: ~120 s samples
+  - Stats (sample day): min=0.000, max=1758521280000.000, mean=4851230724.988, count=725
+  - Sample 1: {'t': 1758492000000, 'bpm': 64}
+  - Sample 2: {'t': 1758492120000, 'bpm': 64}
+  - Sample 3: {'t': 1758492240000, 'bpm': 64}
+  - Object keys (12): ['userProfilePK', 'calendarDate', 'startTimestampGMT', 'endTimestampGMT', 'startTimestampLocal', 'endTimestampLocal', 'maxHeartRate', 'minHeartRate', 'restingHeartRate', 'lastSevenDaysAvgRestingHeartRate', 'heartRateValues', 'heartRateValueDescriptors']
+- Metric: Sleep
+  - Type: object
+  - Resolution: daily
+  - Stats (sample day): min=-2.000, max=1758527700000.000, mean=138797021216.611, count=3213
+  - Sample 1: {'respirationVersion': 100}
+  - Sample 2: {'bodyBatteryChange': 36}
+  - Sample 3: {'restingHeartRate': 51}
+  - Object keys (15): ['dailySleepDTO', 'sleepMovement', 'remSleepData', 'sleepLevels', 'wellnessSpO2SleepSummaryDTO', 'wellnessEpochSPO2DataDTOList', 'wellnessEpochRespirationDataDTOList', 'wellnessEpochRespirationAveragesList', 'respirationVersion', 'sleepHeartRate', 'sleepStress', 'sleepBodyBattery', 'skinTempDataExists', 'bodyBatteryChange', 'restingHeartRate']
+- Metric: Stress
+  - Type: object
+  - Resolution: daily
+  - Stats (sample day): min=-2.000, max=1758578220000.000, mean=437129442313.205, count=1931
+  - Sample 1: {'userProfilePK': 100268862}
+  - Sample 2: {'maxStressLevel': 99}
+  - Sample 3: {'avgStressLevel': 25}
+  - Object keys (14): ['userProfilePK', 'calendarDate', 'startTimestampGMT', 'endTimestampGMT', 'startTimestampLocal', 'endTimestampLocal', 'maxStressLevel', 'avgStressLevel', 'stressChartValueOffset', 'stressChartYAxisOrigin', 'stressValueDescriptorsDTOList', 'stressValuesArray', 'bodyBatteryValueDescriptorsDTOList', 'bodyBatteryValuesArray']
+- Metric: SpO2
+  - Type: object
+  - Resolution: daily
+  - Stats (sample day): min=0.000, max=100268862.000, mean=5277381.865, count=19
+  - Sample 1: {'userProfilePK': 100268862}
+  - Sample 2: {'averageSpO2': 94.0}
+  - Sample 3: {'lowestSpO2': 84}
+  - Object keys (26): ['userProfilePK', 'calendarDate', 'startTimestampGMT', 'endTimestampGMT', 'startTimestampLocal', 'endTimestampLocal', 'sleepStartTimestampGMT', 'sleepEndTimestampGMT', 'sleepStartTimestampLocal', 'sleepEndTimestampLocal', 'tomorrowSleepStartTimestampGMT', 'tomorrowSleepEndTimestampGMT', 'tomorrowSleepStartTimestampLocal', 'tomorrowSleepEndTimestampLocal', 'averageSpO2', 'lowestSpO2', 'lastSevenDaysAvgSpO2', 'latestSpO2', 'latestSpO2TimestampGMT', 'latestSpO2TimestampLocal']
+- Metric: Respiration
+  - Type: object
+  - Resolution: daily
+  - Stats (sample day): min=-2.000, max=100268862.000, mean=132468.699, count=757
+  - Sample 1: {'userProfilePK': 100268862}
+  - Sample 2: {'lowestRespirationValue': 9.0}
+  - Sample 3: {'highestRespirationValue': 22.0}
+  - Object keys (24): ['userProfilePK', 'calendarDate', 'startTimestampGMT', 'endTimestampGMT', 'startTimestampLocal', 'endTimestampLocal', 'sleepStartTimestampGMT', 'sleepEndTimestampGMT', 'sleepStartTimestampLocal', 'sleepEndTimestampLocal', 'tomorrowSleepStartTimestampGMT', 'tomorrowSleepEndTimestampGMT', 'tomorrowSleepStartTimestampLocal', 'tomorrowSleepEndTimestampLocal', 'lowestRespirationValue', 'highestRespirationValue', 'avgWakingRespirationValue', 'avgSleepRespirationValue', 'avgTomorrowSleepRespirationValue', 'respirationValueDescriptorsDTOList']
+- Metric: Intensity minutes
+  - Type: object
+  - Resolution: daily
+  - Stats (sample day): min=0.000, max=100268862.000, mean=6684656.800, count=15
+  - Sample 1: {'userProfilePK': 100268862}
+  - Sample 2: {'weeklyModerate': 115}
+  - Sample 3: {'weeklyVigorous': 105}
+  - Object keys (17): ['userProfilePK', 'calendarDate', 'startTimestampGMT', 'endTimestampGMT', 'startTimestampLocal', 'endTimestampLocal', 'weeklyModerate', 'weeklyVigorous', 'weeklyTotal', 'weekGoal', 'dayOfGoalMet', 'startDayMinutes', 'endDayMinutes', 'moderateMinutes', 'vigorousMinutes', 'imValueDescriptorsDTOList', 'imValuesArray']
+- Metric: Resting HR (RHR)
+  - Type: object
+  - Resolution: daily
+  - Stats (sample day): min=51.000, max=51.000, mean=51.000, count=1
+  - Sample 1: {'userProfileId': 100268862}
+  - Object keys (5): ['userProfileId', 'statisticsStartDate', 'statisticsEndDate', 'allMetrics', 'groupedMetrics']
+- Metric: HRV
+  - Data: none in last 7 days
+- Metric: Floors
+  - Type: object
+  - Resolution: daily
+  - Sample 1: {'startTimestampGMT': '2025-09-21T22:00:00.0'}
+  - Sample 2: {'endTimestampGMT': '2025-09-22T22:00:00.0'}
+  - Sample 3: {'startTimestampLocal': '2025-09-22T00:00:00.0'}
+  - Object keys (6): ['startTimestampGMT', 'endTimestampGMT', 'startTimestampLocal', 'endTimestampLocal', 'floorsValueDescriptorDTOList', 'floorValuesArray']
+- Metric: Hydration
+  - Type: object
+  - Resolution: daily
+  - Stats (sample day): min=0.000, max=2920.000, mean=760.000, count=4
+  - Sample 1: {'userId': 100268862}
+  - Sample 2: {'valueInML': 0.0}
+  - Sample 3: {'goalInML': 2920.0}
+  - Object keys (8): ['userId', 'calendarDate', 'valueInML', 'goalInML', 'dailyAverageinML', 'lastEntryTimestampLocal', 'sweatLossInML', 'activityIntakeInML']
+- Metric: Daily weigh-ins
+  - Type: object
+  - Resolution: daily
+  - Stats (sample day): min=1758499200000.000, max=1758585599999.000, mean=1758542399999.500, count=2
+  - Sample 1: {'startDate': '2025-09-22'}
+  - Sample 2: {'endDate': '2025-09-22'}
+  - Sample 3: {'dateWeightList': []}
+  - Object keys (4): ['startDate', 'endDate', 'dateWeightList', 'totalAverage']
+- Metric: User summary
+  - Type: object
+  - Resolution: daily
+  - Stats (sample day): min=2.000, max=100268862.000, mean=2969314.338, count=63
+  - Sample 1: {'userProfileId': 100268862}
+  - Sample 2: {'totalKilocalories': 2737.0}
+  - Sample 3: {'activeKilocalories': 493.0}
+  - Object keys (91): ['userProfileId', 'totalKilocalories', 'activeKilocalories', 'bmrKilocalories', 'wellnessKilocalories', 'burnedKilocalories', 'consumedKilocalories', 'remainingKilocalories', 'totalSteps', 'netCalorieGoal', 'totalDistanceMeters', 'wellnessDistanceMeters', 'wellnessActiveKilocalories', 'netRemainingKilocalories', 'userDailySummaryId', 'calendarDate', 'rule', 'uuid', 'dailyStepGoal', 'wellnessStartTimeGmt']
+- Metric: Stats
+  - Type: object
+  - Resolution: daily
+  - Stats (sample day): min=2.000, max=100268862.000, mean=2969314.338, count=63
+  - Sample 1: {'userProfileId': 100268862}
+  - Sample 2: {'totalKilocalories': 2737.0}
+  - Sample 3: {'activeKilocalories': 493.0}
+  - Object keys (91): ['userProfileId', 'totalKilocalories', 'activeKilocalories', 'bmrKilocalories', 'wellnessKilocalories', 'burnedKilocalories', 'consumedKilocalories', 'remainingKilocalories', 'totalSteps', 'netCalorieGoal', 'totalDistanceMeters', 'wellnessDistanceMeters', 'wellnessActiveKilocalories', 'netRemainingKilocalories', 'userDailySummaryId', 'calendarDate', 'rule', 'uuid', 'dailyStepGoal', 'wellnessStartTimeGmt']
+- Metric: Stats + body
+  - Type: object
+  - Resolution: daily
+  - Stats (sample day): min=2.000, max=1758585599999.000, mean=54111874873.881, count=65
+  - Sample 1: {'userProfileId': 100268862}
+  - Sample 2: {'totalKilocalories': 2737.0}
+  - Sample 3: {'activeKilocalories': 493.0}
+  - Object keys (102): ['userProfileId', 'totalKilocalories', 'activeKilocalories', 'bmrKilocalories', 'wellnessKilocalories', 'burnedKilocalories', 'consumedKilocalories', 'remainingKilocalories', 'totalSteps', 'netCalorieGoal', 'totalDistanceMeters', 'wellnessDistanceMeters', 'wellnessActiveKilocalories', 'netRemainingKilocalories', 'userDailySummaryId', 'calendarDate', 'rule', 'uuid', 'dailyStepGoal', 'wellnessStartTimeGmt']
+- Metric: Body Battery events
+  - Data: none in last 7 days
+- Metric: Training readiness
+  - Data: none in last 7 days
+- Metric: Training status
+  - Type: object
+  - Resolution: daily
+  - Stats (sample day): min=0.000, max=1758561188000.000, mean=126095126161.243, count=14
+  - Sample 1: {'userId': 100268862}
+  - Object keys (5): ['userId', 'mostRecentVO2Max', 'mostRecentTrainingLoadBalance', 'mostRecentTrainingStatus', 'heatAltitudeAcclimationDTO']
+- Metric: Max metrics
+  - Type: list<dict>
+  - Resolution: daily
+  - Stats (sample day): min=0.000, max=46.200, mean=28.050, count=4
+  - Sample 1: {'userId': 100268862, 'generic': {'calendarDate': '2025-09-27', 'vo2MaxPreciseValue': 46.2, 'vo2MaxValue': 46.0, 'fitnessAge': 20, 'fitnessAgeDescription': None, 'maxMetCategory': 0}, 'cycling': None, 'heatAltitudeAcclimation': None}
+
+## Range Metrics (weekly/monthly)
+- Metric: Daily steps (totals)
+  - Type: list<dict>
+  - Stats (last 7 days): min=1190.000, max=11724.000, mean=5747.095, count=21
+  - Sample 1: {'date': 2025-09-22, 'totalSteps': 5797}
+- Metric: Body Battery
+  - Type: list<dict>
+  - Stats (last 30 days): min=0.000, max=100.000, mean=45.943, count=300
+- Metric: Body composition
+  - Type: object
+  - Stats (last 30 days): min=1756512000000.000, max=1759103999999.000, mean=1757807999999.500, count=2
+  - Keys: ['startDate', 'endDate', 'dateWeightList', 'totalAverage']
+- Metric: Weigh-ins
+  - Type: object
+  - Stats (last 30 days): min=1756512000000.000, max=1759103999999.000, mean=1757807999999.500, count=2
+  - Keys: ['dailyWeightSummaries', 'totalAverage', 'previousDateWeight', 'nextDateWeight']
+- Metric: Endurance score
+  - Type: object
+  - Stats (last 30 days): min=100268862.000, max=100268862.000, mean=100268862.000, count=1
+  - Keys: ['userProfilePK', 'startDate', 'endDate', 'avg', 'max', 'groupMap', 'enduranceScoreDTO']
+- Metric: Hill score
+  - Type: object
+  - Stats (last 30 days): min=100268862.000, max=100268862.000, mean=100268862.000, count=1
+  - Keys: ['userProfilePK', 'startDate', 'endDate', 'periodAvgScore', 'maxScore', 'hillScoreDTOList']
+- Metric: Race predictions
+  - Type: object
+  - Keys: ['userId', 'fromCalendarDate', 'toCalendarDate', 'calendarDate', 'time5K', 'time10K', 'timeHalfMarathon', 'timeMarathon']
+
+## Activities — Last 30 Days
+Total activities: 20
+- Type: indoor_rowing — count 2
+  - Activity keys (63): ['activityId', 'activityName', 'startTimeLocal', 'startTimeGMT', 'activityType', 'eventType', 'distance', 'duration', 'elapsedDuration', 'movingDuration', 'averageSpeed', 'hasPolyline', 'hasImages', 'ownerId', 'ownerDisplayName', 'ownerFullName', 'ownerProfileImageUrlSmall', 'ownerProfileImageUrlMedium', 'ownerProfileImageUrlLarge', 'calories']
+  - Sample 1: {'startTimeLocal': '2025-09-24 21:23:26', 'distance': 0.0, 'duration': 2432.080078125, 'calories': 338.0, 'averageHR': 124.0, 'averageSpeed': 0.0}
+  - Sample 2: {'startTimeLocal': '2025-09-13 19:07:29', 'distance': 0.0, 'duration': 2344.05810546875, 'calories': 423.0, 'averageHR': 138.0, 'averageSpeed': 0.0}
+  - distance: min=0.000, max=0.000, mean=0.000, count=2
+  - duration: min=2344.058, max=2432.080, mean=2388.069, count=2
+  - elapsedDuration: min=2344.058, max=2432.080, mean=2388.069, count=2
+  - averageHR: min=124.000, max=138.000, mean=131.000, count=2
+  - maxHR: min=137.000, max=166.000, mean=151.500, count=2
+  - averageSpeed: min=0.000, max=0.000, mean=0.000, count=2
+  - calories: min=338.000, max=423.000, mean=380.500, count=2
+  - movingDuration: min=0.000, max=0.000, mean=0.000, count=2
+  - aerobicTrainingEffect: min=2.000, max=3.000, mean=2.500, count=2
+  - anaerobicTrainingEffect: min=0.000, max=0.100, mean=0.050, count=2
+- Type: running — count 8
+  - Activity keys (79): ['activityId', 'activityName', 'startTimeLocal', 'startTimeGMT', 'activityType', 'eventType', 'distance', 'duration', 'elapsedDuration', 'movingDuration', 'elevationGain', 'elevationLoss', 'averageSpeed', 'maxSpeed', 'startLatitude', 'startLongitude', 'hasPolyline', 'hasImages', 'ownerId', 'ownerDisplayName']
+  - Sample 1: {'startTimeLocal': '2025-09-28 16:39:32', 'distance': 2332.389892578125, 'duration': 1256.740966796875, 'calories': 254.0, 'averageHR': 153.0, 'averageSpeed': 1.8559999465942383}
+  - Sample 2: {'startTimeLocal': '2025-09-27 18:21:04', 'distance': 6620.18994140625, 'duration': 2634.7099609375, 'calories': 556.0, 'averageHR': 155.0, 'averageSpeed': 2.513000011444092}
+  - Sample 3: {'startTimeLocal': '2025-09-22 18:52:09', 'distance': 2292.550048828125, 'duration': 1205.583984375, 'calories': 177.0, 'averageHR': 126.0, 'averageSpeed': 1.9019999504089358}
+  - distance: min=2292.550, max=8569.910, mean=5726.263, count=8
+  - duration: min=1205.584, max=3636.122, mean=2496.121, count=8
+  - elapsedDuration: min=1205.584, max=3636.122, mean=2496.121, count=8
+  - averageHR: min=126.000, max=160.000, mean=149.375, count=8
+  - maxHR: min=139.000, max=184.000, mean=172.875, count=8
+  - averageSpeed: min=1.856, max=2.513, mean=2.244, count=8
+  - maxSpeed: min=2.379, max=3.919, mean=3.364, count=8
+  - elevationGain: min=8.249, max=35.829, mean=24.342, count=8
+  - elevationLoss: min=8.170, max=37.154, mean=22.706, count=8
+  - calories: min=177.000, max=725.000, mean=490.625, count=8
+  - steps: min=3096.000, max=8920.000, mean=6194.000, count=8
+  - movingDuration: min=1204.000, max=3633.862, mean=2493.283, count=8
+  - aerobicTrainingEffect: min=1.300, max=4.100, mean=3.275, count=8
+  - anaerobicTrainingEffect: min=0.000, max=1.300, mean=0.550, count=8
+- Type: strength_training — count 10
+  - Activity keys (66): ['activityId', 'activityName', 'startTimeLocal', 'startTimeGMT', 'activityType', 'eventType', 'distance', 'duration', 'elapsedDuration', 'movingDuration', 'averageSpeed', 'hasPolyline', 'hasImages', 'ownerId', 'ownerDisplayName', 'ownerFullName', 'ownerProfileImageUrlSmall', 'ownerProfileImageUrlMedium', 'ownerProfileImageUrlLarge', 'calories']
+  - Sample 1: {'startTimeLocal': '2025-09-25 20:06:01', 'distance': 0.0, 'duration': 1650.83203125, 'calories': 249.0, 'averageHR': 125.0, 'averageSpeed': 0.0}
+  - Sample 2: {'startTimeLocal': '2025-09-21 16:38:08', 'distance': 0.0, 'duration': 3508.85595703125, 'calories': 284.0, 'averageHR': 95.0, 'averageSpeed': 0.0}
+  - Sample 3: {'startTimeLocal': '2025-09-19 18:22:47', 'distance': 0.0, 'duration': 2598.35888671875, 'calories': 292.0, 'averageHR': 110.0, 'averageSpeed': 0.0}
+  - distance: min=0.000, max=0.000, mean=0.000, count=10
+  - duration: min=1365.528, max=4102.593, mean=2786.912, count=10
+  - elapsedDuration: min=1365.528, max=4102.593, mean=2787.446, count=10
+  - averageHR: min=91.000, max=128.000, mean=111.300, count=10
+  - maxHR: min=120.000, max=164.000, mean=144.800, count=10
+  - averageSpeed: min=0.000, max=0.000, mean=0.000, count=10
+  - calories: min=233.000, max=368.000, mean=297.000, count=10
+  - steps: min=84.000, max=304.000, mean=219.800, count=10
+  - movingDuration: min=481.964, max=812.412, mean=711.732, count=10
+  - aerobicTrainingEffect: min=0.300, max=2.400, mean=1.540, count=10
+  - anaerobicTrainingEffect: min=0.000, max=0.900, mean=0.240, count=10
+
+Notes: activity details (splits, laps, weather, HR-in-timezones, gear, sets) are retrievable via detail endpoints and can be added next.
